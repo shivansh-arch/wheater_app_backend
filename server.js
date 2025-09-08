@@ -42,7 +42,7 @@ app.get('/weather', async (req, res) => {
   try {
     if (city) {
       // New Geocoding API call to get lat/lon from city name
-      const geocodeSearchUrl = `https://geocode.maps.co/search?q=${encodeURIComponent(city)}&api_key=${process.env.GEOCODE_MAPS_CO_API_KEY}`;
+      const geocodeSearchUrl = `https://geocode.maps.co/search?q=address&api_key`;
       const geocodeSearchResponse = await axios.get(geocodeSearchUrl);
 
       if (geocodeSearchResponse.data && geocodeSearchResponse.data.length > 0) {
