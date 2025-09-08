@@ -35,6 +35,9 @@ app.get('/', (req, res) => {
 
 // Main Weather Route with improvements
 app.get('/weather', async (req, res) => {
+  // Debugging line to see what the server receives
+  console.log('Received query:', req.query);
+
   const { lat, lon, city } = req.query;
 
   let latitude, longitude;
